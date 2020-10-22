@@ -1,2 +1,2 @@
-# SNAKES
-Automated snakes and ladders using CSS grid to place the pieces and a switch statement to decide if a snake or ladder is encountered, plus an "active" "inactive" state for the dice to block 'em while transitions are being made.
+# SCREEN GAME
+A simple way to play any board game found on the web onscreen... simply take a screenshot of the game board, convert it to JPG format and place it in the image file... gonna make it even simpler for non-programmers by having an "input" that accepts the filename and then makes that the inner HTML of the game div... At the moment, it can't be used because I'm sure the Marvel Characters are copyrighted, will replace with freebie icons... 
