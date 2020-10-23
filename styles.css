@@ -5,9 +5,9 @@ body {
     align-items: center;
     justify-content: center;
     padding: 40px;
+    box-sizing: border-box;
     height: 100vh;
-    background-color: black;
-   
+    background-color: rgb(99, 47, 99);
 }
 
 .board {
@@ -18,7 +18,6 @@ body {
     align-items: center;
     justify-items: center;
     grid-gap: 0;
-
 }
 
 .board img {
@@ -29,12 +28,78 @@ body {
     left: -19px;
 }
 
-h1 {
-    width: 300px;
-    color: white;
-    text-align: center;
-    font-size: 3rem;
-    margin: auto;
+.dice {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(184, 2, 2);
+    margin-right: 40px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px (255, 255, 255, 0.9);
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-family: Sniglet;
+    perspective: 1000;
+}
+
+.dicediv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.roll {
+    width: 80px;
+    margin-right: 40px;    
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: yellow;
+    font-size: 1.4rem;
+    box-shadow: 3px 3px 3px 2px(255,255,255, 0.8);
+    cursor: pointer;
+    font-family: Sniglet;
+    border: none;
+}
+
+.roll:hover {
+    transform: translateY(1px);
+    box-shadow: 3px 3px 3px 3px(255,255,255, 0.9);
+}
+.roll:active {
+    transform: translateY(2px);
+    outline: none;
+    box-shadow: 1px 1px 1px (255,255,255,0.7);
+}
+.roll:focus {
+    outline: none;
+}
+
+.flash {
+    animation: flash .25s infinite;
+}
+
+@keyframes flash{
+    0% {
+        background-color: white;
+    }
+    20% {
+        background-color: red;
+    }
+    40% {
+        background-color: white;
+    }
+    60% {
+        background-color: red;
+    }
+    80% {
+        background-color: white;
+    }
+    100% {
+        background-color: red;
+    }
 }
 
 #piece1 {
@@ -44,21 +109,10 @@ h1 {
     width: 70px;
     border-radius: 100%;
     z-index: 10;
-
+    cursor: pointer;
 }
 
 #piece1 img{
-    height: 100%;
-    width: 100%;
-}
-
-.id3{
-    position: absolute;
-    height: 400px;
-    width: 200px;
-}
-
-.id3 img{
     height: 100%;
     width: 100%;
 }
@@ -70,6 +124,7 @@ h1 {
     width: 70px;
     border-radius: 100%;
     z-index: 10;
+    cursor: pointer;
 }
 
 #piece2 img{
@@ -77,18 +132,26 @@ h1 {
     width: 100%;
 }
 
-.dice {
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    margin-right: 40px;
-    border-radius: 8px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    font-family: Sniglet;
+.id3{
+    position: absolute;
+    height: 450px;
+    width: 220px;
     cursor: pointer;
 }
 
+.id3 img{
+    height: 100%;
+    width: 100%;
+}
+
+.id4{
+    position: absolute;
+    height: 450px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.id4 img{
+    height: 100%;
+    width: 100%;
+}

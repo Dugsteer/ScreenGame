@@ -1,37 +1,42 @@
-
 const board = document.getElementById("board");
 const die = document.querySelector(".dice");
-die.addEventListener('click', rollDice);
+const roll = document.getElementById("roll");
+
+function flash(){
+  die.classList.add('flash');
+}
+
+function flashoff(){
+  die.classList.remove('flash');
+}
 
 
-//rollDice and get move
+
+//rollDice
 function rollDice(){
-   
     // get a number between 0 and 5
-    var result= Math.floor(Math.random() * 6);
+    let result= Math.floor(Math.random() * 6);
+    flash();
+    die.textContent="";
+    function setText(){
+      die.textContent = result + 1;
+    }
     //set the dice text on the DOM to 1 to 6;
-    die.textContent = result + 1;
-    //get a variable
+    setTimeout(flashoff, 100);
+    setTimeout(setText, 200);
 };
 
-
-
-
-
-
-
+roll.addEventListener('click', rollDice);
 
 
 // Move pieces
-
-
 dragElement(document.getElementById("piece1"));
 dragElement(document.getElementById("piece2"));
 dragElement(document.getElementById("piece3"));
 dragElement(document.getElementById("piece4"));
 
 function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     elmnt.onmousedown = dragMouseDown;
   
 
