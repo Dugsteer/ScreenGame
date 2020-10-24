@@ -11,21 +11,22 @@ body {
 }
 
 .board {
-    position: relative;
-    display:block;
-    width: 440px;
-    height: 630px;
+    display:flex;
+    width: 424px;
+    height: 650px;
     align-items: center;
     justify-items: center;
     grid-gap: 0;
+    resize: both;
+    overflow: auto;
+  background-color: white;
 }
 
 .board img {
-    position: absolute;
-    width: 440px;
-    height: auto;
-    top: -16px;
-    left: -19px;
+    width: 100%;
+    height: 100%;
+  
+    
 }
 
 .dice {
@@ -76,6 +77,14 @@ body {
 }
 .roll:focus {
     outline: none;
+}
+
+.rolly {
+    width: 150px;
+    margin-right: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .flash {

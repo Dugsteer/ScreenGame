@@ -1,6 +1,16 @@
 const board = document.getElementById("board");
 const die = document.querySelector(".dice");
 const roll = document.getElementById("roll");
+const imgdiv = document.getElementById('imgdiv');
+const rolly = document.getElementById('rolly');
+const me = document.getElementById('me');
+
+function goforit(){
+  imgdiv.innerHTML = ` <img src="img/${rolly.value}" alt="">`;
+  rolly.style.display = "none";
+  me.style.display = "none";
+
+}
 
 function flash(){
   die.classList.add('flash');
