@@ -1,3 +1,20 @@
+const img1 = document.getElementById('mypic'); 
+const inputpanel = document.getElementById('inputpanel');
+const getButton = document.getElementById('getButton');
+
+
+
+window.addEventListener('load', function() {
+  document.querySelector('input[type="file"]').addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          img1.src = URL.createObjectURL(this.files[0]);
+          getButton.style.display = "none";
+          img1.style.display = "block";
+        
+      }
+  });
+});
+
 const board = document.getElementById("board");
 const die = document.querySelector(".dice");
 const roll = document.getElementById("roll");
@@ -9,7 +26,6 @@ function goforit(){
   imgdiv.innerHTML = ` <img src="img/${rolly.value}" alt="">`;
   rolly.style.display = "none";
   me.style.display = "none";
-
 }
 
 function flash(){
@@ -19,8 +35,6 @@ function flash(){
 function flashoff(){
   die.classList.remove('flash');
 }
-
-
 
 //rollDice
 function rollDice(){
@@ -42,8 +56,8 @@ roll.addEventListener('click', rollDice);
 // Move pieces
 dragElement(document.getElementById("piece1"));
 dragElement(document.getElementById("piece2"));
-dragElement(document.getElementById("piece3"));
-dragElement(document.getElementById("piece4"));
+// dragElement(document.getElementById("piece3"));
+// dragElement(document.getElementById("piece4"));
 
 function dragElement(elmnt) {
   let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

@@ -10,19 +10,23 @@
     <div class="dicediv">
     <div class="dice" id="dice">5</div>
     <button class="roll" id="roll">ROLL</button>
-    <input class="rolly" id="rolly" type="text" value="" placeholder="gameimage.jpg">
-    <div class="roll" id="me" onclick="goforit();">Go</div>
+    <button id="getButton" style="display:block;width:200px; height:30px; background-color:#7ebc59; border-radius: 5px; color: white; text-transform: uppercase;" onclick="document.getElementById('getFile').click()">Choose your image</button>
+
+    <!-- <input class="rolly" id="rolly" type="text" value="" placeholder="gameimage.jpg"> -->
+    <!-- <div class="roll" id="me" onclick="goforit();">Go</div> -->
 
 </form>
 </div>
     <div id="board" class="board">
         <div class="imgdiv" id='imgdiv'>
-        <img src="img/FutureGame.jpg" alt="">
+
+              
+                <input type='file' id="getFile" style="display:none">
+        <img id="mypic" src="img/SnakesBoard.jpg" alt="your image" height=200 width=auto>
+  
         </div>
-        <div id="piece1" class="id1"><img src="pieces/ironman.png" alt=""></div>
-        <div id="piece2" class="id1"><img src="pieces/thanos.png" alt=""></div>
-        <!-- <div id="piece3" class="id4"><img src="pieces/thanos1.png" alt=""></div>
-        <div id="piece4" class="id3"><img src="pieces/ironman1.png" alt=""></div> -->
+        <div id="piece1" class="id1"></div>
+        <div id="piece2" class="id1"></div>
     </div>
     <script src="script.js"></script>
 </body>

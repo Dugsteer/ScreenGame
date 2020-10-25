@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
 
 body {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px;
     box-sizing: border-box;
     height: 100vh;
-    background-color: rgb(99, 47, 99);
+    background-color: #368cbf;
 }
 
 .board {
@@ -15,7 +16,7 @@ body {
     width: 424px;
     height: 650px;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     grid-gap: 0;
     resize: both;
     overflow: auto;
@@ -57,7 +58,7 @@ body {
     margin-right: 40px;    
     margin-top: 20px;
     border-radius: 5px;
-    background-color: yellow;
+    background-color: #ffe164;
     font-size: 1.4rem;
     box-shadow: 3px 3px 3px 2px(255,255,255, 0.8);
     cursor: pointer;
@@ -115,32 +116,42 @@ body {
 #piece1 {
     position: absolute;
     transform: translate(-10px, -13px);
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    z-index: 10;
+    top: 20px;
+    left: 20px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px 3px (0,0,0,0.7);
+    border-radius: 50%;
+    background-color: #f6653c;
+    z-index: 30;
     cursor: pointer;
 }
-
+/* 
 #piece1 img{
     height: 100%;
     width: 100%;
-}
+} */
 
 #piece2 {
     position: absolute;
     transform: translate(10px, 13px);
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    z-index: 10;
+    top: 60px;
+    left: 20px;
+    height: 50px;
+    width: 50px;
+    box-shadow: 5px 5px 5px 4px (0,0,0,0.9);
+border: 1px solid black;
+    border-radius: 50%;
+    background-color: #7ebc59;
+    z-index: 30;
     cursor: pointer;
 }
 
-#piece2 img{
+/* #piece2 img{
     height: 100%;
     width: 100%;
-}
+} */
 
 .id3{
     position: absolute;
@@ -165,3 +176,21 @@ body {
     height: 100%;
     width: 100%;
 }
+
+.imgdiv {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fileinput {
+    background-color: #7ebc59;
+}
+
+/* .drag{
+    position: absolute;
+    bottom: 1rem;
+    left: 3rem;
+    font-size: 1.6rem;
+} */
