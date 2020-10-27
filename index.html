@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Board Games</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <div class="dicediv">
-    <div class="dice" id="dice">5</div>
-    <button class="roll" id="roll">ROLL</button>
-    <button id="getButton" style="display:block;width:200px; height:30px; background-color:#7ebc59; border-radius: 5px; color: white; text-transform: uppercase;" onclick="document.getElementById('getFile').click()">Choose your image</button>
-
-    <!-- <input class="rolly" id="rolly" type="text" value="" placeholder="gameimage.jpg"> -->
-    <!-- <div class="roll" id="me" onclick="goforit();">Go</div> -->
-
-</form>
-</div>
-    <div id="board" class="board">
-        <div class="imgdiv" id='imgdiv'>
-
-              
-                <input type='file' id="getFile" style="display:none">
-        <img id="mypic" src="img/SnakesBoard.jpg" alt="your image" height=200 width=auto>
-  
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="contents">
+      <div class="dicediv">
+        <div class="dice" id="dice">5</div>
+        <button class="roll" id="roll">ROLL</button>
+        <button
+          id="getButton"
+          style="
+            display: block;
+            width: 200px;
+            height: 30px;
+            background-color: #7ebc59;
+            border-radius: 5px;
+            color: white;
+            text-transform: uppercase;
+          "
+          onclick="document.getElementById('getFile').click()"
+        >
+          Choose your image
+        </button>
+      </div>
+      <div id="board" class="board">
+        <div class="imgdiv" id="imgdiv">
+          <input type="file" id="getFile" style="display: none" />
+          <img
+            id="mypic"
+            src="img/SnakesBoard.jpg"
+            alt="your image"
+            height="200"
+            width="auto"
+          />
         </div>
-        <div id="piece1" class="id1"></div>
-        <div id="piece2" class="id1"></div>
+        <div id="piece1" class="id1">
+          <img src="pieces/thanos.png" alt="" />
+        </div>
+        <div id="piece2" class="id1">
+          <img src="pieces/ironman.png" alt="" />
+        </div>
+        <div id="piece3" class="id1">
+          <img src="pieces/spidey.png" alt="" />
+        </div>
+        <div id="piece4" class="id1">
+          <img src="pieces/america.png" alt="" />
+        </div>
+        <div id="piece5" class="id1"><img src="pieces/hulk.png" alt="" /></div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
